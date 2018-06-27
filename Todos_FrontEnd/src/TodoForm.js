@@ -17,11 +17,12 @@ class TodoForm extends Component {
 
 	handleSubmit() {
 		this.props.addTodo(this.state.inputValue);
+		this.setState({inputValue: ''});
 	}
 
 	render() {
 		return (
-			<div>
+			<div id="todoInput">
 				<input 
 					type="text"
 					value={this.state.inputValue}
